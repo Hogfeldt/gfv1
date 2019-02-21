@@ -33,6 +33,12 @@
   <file name="C:\Ase\Semester3\GFV\DC-Motor\DC-Motor-PWM.cydsn\codegentemp\Pin_PWM_aliases.h" value="HEADER;;;;;Pin_PWM" />
   <file name="C:\Ase\Semester3\GFV\DC-Motor\DC-Motor-PWM.cydsn\codegentemp\Pin_PWM.c" value="SOURCE_C;CortexM3;;;;Pin_PWM" />
   <file name="C:\Ase\Semester3\GFV\DC-Motor\DC-Motor-PWM.cydsn\codegentemp\Pin_PWM.h" value="HEADER;;;;;Pin_PWM" />
+  <file name="C:\Ase\Semester3\GFV\DC-Motor\DC-Motor-PWM.cydsn\codegentemp\Pin_2_aliases.h" value="HEADER;;;;;Pin_2" />
+  <file name="C:\Ase\Semester3\GFV\DC-Motor\DC-Motor-PWM.cydsn\codegentemp\Pin_2.c" value="SOURCE_C;CortexM3;;;;Pin_2" />
+  <file name="C:\Ase\Semester3\GFV\DC-Motor\DC-Motor-PWM.cydsn\codegentemp\Pin_2.h" value="HEADER;;;;;Pin_2" />
+  <file name="C:\Ase\Semester3\GFV\DC-Motor\DC-Motor-PWM.cydsn\codegentemp\Pin_1_aliases.h" value="HEADER;;;;;Pin_1" />
+  <file name="C:\Ase\Semester3\GFV\DC-Motor\DC-Motor-PWM.cydsn\codegentemp\Pin_1.c" value="SOURCE_C;CortexM3;;;;Pin_1" />
+  <file name="C:\Ase\Semester3\GFV\DC-Motor\DC-Motor-PWM.cydsn\codegentemp\Pin_1.h" value="HEADER;;;;;Pin_1" />
   <file name="C:\Ase\Semester3\GFV\DC-Motor\DC-Motor-PWM.cydsn\codegentemp\UART_1_IntClock.c" value="SOURCE_C;CortexM3;;;;UART_1_IntClock" />
   <file name="C:\Ase\Semester3\GFV\DC-Motor\DC-Motor-PWM.cydsn\codegentemp\UART_1_IntClock.h" value="HEADER;;;;;UART_1_IntClock" />
   <file name="C:\Ase\Semester3\GFV\DC-Motor\DC-Motor-PWM.cydsn\codegentemp\cm3gcc.ld" value="LINKER_SCRIPT;;;b98f980c-3bd1-4fc7-a887-c56a20a46fdd;;cy_boot" />

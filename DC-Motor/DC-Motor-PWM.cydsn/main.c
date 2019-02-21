@@ -36,9 +36,7 @@ int main(void)
     UART_1_PutString("q: Decrease speed\r\n");
     UART_1_PutString("w: Increase speed\r\n");
 
-    //enable_Write(1);
     
-    //PWM_1_WriteCompare(75);
     for(;;)
     {
         /* Place your application code here. */
@@ -126,17 +124,24 @@ void increaseSpeed()
 void driveForwards()
 {
     UART_1_PutString("Set direction: forwards\r\n");
+    
+    Pin_1_Write(1);
+    Pin_2_Write(0);
+    
 }
 
 void driveBackwards()
 {
     UART_1_PutString("Set direction: backwards\r\n");
+    
+    Pin_1_Write(0);
+    Pin_2_Write(1);
 }
 
 void stop()
 {
     UART_1_PutString("Stop\r\n");
-    PWM_1_WritePeriod(0);
+    PWM_1_WriteCompare(0);
 }
 
 /* [] END OF FILE */
