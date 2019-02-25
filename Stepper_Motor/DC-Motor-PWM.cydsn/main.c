@@ -12,7 +12,7 @@
 #include "project.h"
 
 enum driveMode{full, wave, halfStep};
-enum fullDrivePos{a1, a2, b1, b2};
+enum fullDrivePos{a1, a1a2, a2, a2b1, b1, b1b2, b2, b2a1};
 enum direction{forward, backward};
 
 enum driveMode mode;
@@ -107,10 +107,167 @@ int main(void)
                         }
                     }
             case full :
-                break;
-                
+                switch(pos) {
+                    case a1a2 :
+                        Pin_1_a_Write(0);
+                        Pin_2_a_Write(0);
+                        if(dir == forward) {
+                            pos = a2b1;
+                            Pin_2_a_Write(1);
+                            Pin_1_b_Write(1);
+                            break;
+                        } else {
+                            pos = b2a1;  
+                            Pin_1_a_Write(1);
+                            Pin_2_b_Write(1);
+                            break;
+                        }
+                    case a2b1 :
+                        Pin_2_a_Write(0); 
+                        Pin_1_b_Write(0);
+                        if(dir == forward) {
+                            pos = b1b2;  
+                            Pin_1_b_Write(1);
+                            Pin_2_b_Write(1);
+                            break;
+                        } else {
+                            pos = a1a2; 
+                            Pin_1_a_Write(1);
+                            Pin_2_a_Write(1);
+                            break;
+                        } 
+                    case b1b2 :
+                        Pin_1_b_Write(0);
+                        Pin_2_b_Write(0);
+                        if(dir == forward) {
+                            pos = b2a1;  
+                            Pin_2_b_Write(1);
+                            Pin_1_a_Write(1);
+                            break;
+                        } else {
+                            pos = a2b1;
+                            Pin_2_a_Write(1);
+                            Pin_1_b_Write(1);
+                            break;
+                        }
+                    case b2a1 :
+                        Pin_2_b_Write(0);  
+                        Pin_1_a_Write(0);
+                        if(dir == forward) {
+                            pos = a1a2;  
+                            Pin_1_a_Write(1);
+                            Pin_2_a_Write(1);
+                            break;
+                        } else {
+                            pos = b1b2; 
+                            Pin_1_b_Write(1);
+                            Pin_2_b_Write(1);
+                            break;
+                        }
+                    }
             case halfStep :
-                break;
+                switch(pos) {
+                    case a1 :
+                        Pin_1_a_Write(0);
+                        if(dir == forward) {
+                            pos = a1a2;
+                            Pin_1_a_Write(1);
+                            Pin_2_a_Write(1);
+                            break;
+                        } else {
+                            pos = b2a1;  
+                            Pin_2_b_Write(1);
+                            Pin_1_a_Write(1);
+                            break;
+                        }
+                    case a1a2 :
+                        Pin_1_a_Write(0);
+                        Pin_2_a_Write(0);
+                        if(dir == forward) {
+                            pos = a2;
+                            Pin_2_a_Write(1);
+                            break;
+                        } else {
+                            pos = a1;  
+                            Pin_1_a_Write(1);
+                            break;
+                        }
+                    case a2 :
+                        Pin_2_a_Write(0); 
+                        if(dir == forward) {
+                            pos = a2b1;  
+                            Pin_2_a_Write(1);
+                            Pin_1_b_Write(1);
+                            break;
+                        } else {
+                            pos = a1a2; 
+                            Pin_1_a_Write(1);
+                            Pin_2_a_Write(1);
+                            break;
+                        }
+                    case a2b1 :
+                        Pin_2_a_Write(0); 
+                        Pin_1_b_Write(0);
+                        if(dir == forward) {
+                            pos = b1;  
+                            Pin_1_b_Write(1);
+                            break;
+                        } else {
+                            pos = a2; 
+                            Pin_2_a_Write(1);
+                            break;
+                        }
+                    case b1 :
+                        Pin_1_b_Write(0);
+                        if(dir == forward) {
+                            pos = b1b2;  
+                            Pin_1_b_Write(1);
+                            Pin_2_b_Write(1);
+                            break;
+                        } else {
+                            pos = a2b1;
+                            Pin_1_b_Write(1);
+                            Pin_2_a_Write(1);
+                            break;
+                        }
+                    case b1b2 :
+                        Pin_1_b_Write(0);
+                        Pin_2_b_Write(0);
+                        if(dir == forward) {
+                            pos = b2;  
+                            Pin_2_b_Write(1);
+                            break;
+                        } else {
+                            pos = b1;
+                            Pin_1_b_Write(1);
+                            break;
+                        }
+                    case b2 :
+                        Pin_2_b_Write(0);  
+                        if(dir == forward) {
+                            pos = b2a1;  
+                            Pin_2_b_Write(1);
+                            Pin_1_a_Write(1);
+                            break;
+                        } else {
+                            pos = b1b2; 
+                            Pin_1_b_Write(1);
+                            Pin_2_b_Write(1);
+                            break;
+                        }
+                    case b2a1 :
+                        Pin_2_b_Write(0);  
+                        Pin_1_a_Write(0);
+                        if(dir == forward) {
+                            pos = a1;  
+                            Pin_1_a_Write(1);
+                            break;
+                        } else {
+                            pos = b2; 
+                            Pin_2_b_Write(1);
+                            break;
+                        }
+                    }
         }
         CyDelay(delay);
     }
@@ -181,9 +338,11 @@ void decreaseSpeed()
 
 void increaseSpeed()
 {
-    if(delay != 5){
+    if(delay >= 10){
         delay -= 5;
         UART_1_PutString("Increasing speed\r\n");
+    } else {
+        delay = 5;
     }
 }
 
@@ -201,11 +360,21 @@ void driveBackwards()
 
 void ChangeDriveMode()
 {    
+    if(mode == full) {
+        mode = wave;
+        pos = a1;
+    } else if(mode == wave) {
+        mode = halfStep;
+    } else if(mode == halfStep) {
+        mode = full;
+        pos = a1a2;
+    }
 }
 
 void stop()
 {
     UART_1_PutString("Stop\r\n");
+    delay = 0;
 }
 
 /* [] END OF FILE */
