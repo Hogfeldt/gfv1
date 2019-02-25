@@ -1,5 +1,5 @@
--- Project:   C:\Ase\Semester3\GFV\Git_repos\gfv1\Stepper_Motor\DC-Motor-PWM.cydsn\DC-Motor-PWM.cyprj
--- Generated: 02/21/2019 10:48:01
+-- Project:   C:\Users\hogfe\Documents\IKT\gfv\gfv1\Stepper_Motor\DC-Motor-PWM.cydsn\DC-Motor-PWM.cyprj
+-- Generated: 02/25/2019 08:37:34
 -- PSoC Creator  4.2
 
 ENTITY \DC-Motor-PWM\ IS

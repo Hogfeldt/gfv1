@@ -11,9 +11,15 @@
 */
 #include "project.h"
 
-enum driveMode{full};
+enum driveMode{full, wave, halfStep};
+enum fullDrivePos{a1, a2, b1, b2};
+enum direction{forward, backward};
 
-enum driveMode mode;    
+enum driveMode mode;
+enum fullDrivePos pos;
+enum direction dir;
+
+int delay;
 
 CY_ISR_PROTO(ISR_UART_rx_handler);
 void handleByteReceived(uint8_t byteReceived);
@@ -41,30 +47,72 @@ int main(void)
     UART_1_PutString("q: Decrease speed\r\n");
     UART_1_PutString("w: Increase speed\r\n");
 
-    mode = full;
+    mode = wave;
+    pos = a1;
+    dir = backward;
+    Pin_1_a_Write(1);  
+    Pin_1_b_Write(0);
+    Pin_2_a_Write(0);
+    Pin_2_b_Write(0);
     
-    for(;;)
-    {
-        /* Place your application code here. */
-        Pin_1_a_Write(1);  
-        Pin_1_b_Write(0);
-        Pin_2_a_Write(0);
-        Pin_2_b_Write(0);
-        CyDelay(10);
-        
-        Pin_1_a_Write(0);  
-        Pin_2_a_Write(1);
-        CyDelay(10);
-          
-        Pin_2_a_Write(0);
-        Pin_1_b_Write(1);
-        CyDelay(10);
-        
-        Pin_1_b_Write(0);
-        Pin_2_b_Write(1);
-        CyDelay(10);
-        
-        Pin_2_b_Write(0); // secure overlap
+    delay = 10;
+    
+   for(;;) {
+        switch(mode) {
+            case wave :
+                switch(pos) {
+                    case a1 :
+                        Pin_1_a_Write(0);
+                        if(dir == forward) {
+                            pos = a2;
+                            Pin_2_a_Write(1);
+                            break;
+                        } else {
+                            pos = b2;  
+                            Pin_2_b_Write(1);
+                            break;
+                        }
+                    case a2 :
+                        Pin_2_a_Write(0); 
+                        if(dir == forward) {
+                            pos = b1;  
+                            Pin_1_b_Write(1);
+                            break;
+                        } else {
+                            pos = a1; 
+                            Pin_1_a_Write(1);
+                            break;
+                        } 
+                    case b1 :
+                        Pin_1_b_Write(0);
+                        if(dir == forward) {
+                            pos = b2;  
+                            Pin_2_b_Write(1);
+                            break;
+                        } else {
+                            pos = a2;
+                            Pin_2_a_Write(1);
+                            break;
+                        }
+                    case b2 :
+                        Pin_2_b_Write(0);  
+                        if(dir == forward) {
+                            pos = a1;  
+                            Pin_1_a_Write(1);
+                            break;
+                        } else {
+                            pos = b1; 
+                            Pin_1_b_Write(1);
+                            break;
+                        }
+                    }
+            case full :
+                break;
+                
+            case halfStep :
+                break;
+        }
+        CyDelay(delay);
     }
 }
 
@@ -128,21 +176,27 @@ void handleByteReceived(uint8_t byteReceived)
 void decreaseSpeed()
 {
     UART_1_PutString("Decreasing speed\r\n");
+    delay += 5;
 }
 
 void increaseSpeed()
 {
-    UART_1_PutString("Increasing speed\r\n");
+    if(delay != 5){
+        delay -= 5;
+        UART_1_PutString("Increasing speed\r\n");
+    }
 }
 
 void driveForwards()
 {
     UART_1_PutString("Set direction: forwards\r\n");
+    dir = forward;
 }
 
 void driveBackwards()
 {
     UART_1_PutString("Set direction: backwards\r\n");
+    dir = backward;
 }
 
 void ChangeDriveMode()
