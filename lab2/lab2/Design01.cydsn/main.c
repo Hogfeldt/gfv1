@@ -64,7 +64,8 @@ void readTemp(uint8 addr) {
         UART_1_PutString(buffer); 
     }
     else{
-        UART_1_PutString("Failed to read\n");
+        I2C_1_MasterSendStop();
+        UART_1_PutString("Failed to read\r\n");
     }
 }
 
@@ -79,8 +80,8 @@ int main(void)
     for(;;)
     {
         readTemp(72);
-        //CyDelay(1000);
-        //readTemp(73);
+        CyDelay(1000);
+        readTemp(79);
         CyDelay(1000);
     }
 }
