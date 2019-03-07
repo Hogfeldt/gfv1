@@ -27,6 +27,7 @@
 #include "SCLK_1.h"
 #include "SPIM_1.h"
 #include "SPIM_1_PVT.h"
+#include "isr_1.h"
 #include "SPIM_1_IntClock.h"
 #include "core_cm3_psoc5.h"
 #include "CyDmac.h"

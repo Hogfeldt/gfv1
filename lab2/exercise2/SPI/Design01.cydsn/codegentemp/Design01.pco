@@ -1,5 +1,5 @@
 # Design01
-# 2019-03-07 11:57:34Z
+# 2019-03-07 13:46:32Z
 
 # IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 0
@@ -19,12 +19,13 @@ set_location "\SPIM_1:BSPIM:BitCounter\" 3 5 7
 set_location "\SPIM_1:BSPIM:TxStsReg\" 2 4 4
 set_location "\SPIM_1:BSPIM:RxStsReg\" 3 4 4
 set_location "\SPIM_1:BSPIM:sR8:Dp:u0\" 3 5 2
+set_location "isr_1" interrupt -1 -1 0
 set_location "Net_25" 3 4 1 1
 set_location "Net_23" 3 5 0 0
 set_location "\SPIM_1:BSPIM:state_2\" 3 5 1 1
 set_location "\SPIM_1:BSPIM:state_1\" 3 5 1 0
 set_location "\SPIM_1:BSPIM:state_0\" 2 5 1 2
-set_location "Net_10" 2 4 0 0
+set_location "Net_17" 2 4 0 0
 set_location "\SPIM_1:BSPIM:load_cond\" 3 4 0 0
 set_location "\SPIM_1:BSPIM:ld_ident\" 3 5 1 2
 set_location "\SPIM_1:BSPIM:cnt_enable\" 3 4 1 0

@@ -19,6 +19,16 @@
 #include "cydevice.h"
 #include "cydevice_trm.h"
 
+/* isr_1 */
+#define isr_1__INTC_CLR_EN_REG CYREG_NVIC_CLRENA0
+#define isr_1__INTC_CLR_PD_REG CYREG_NVIC_CLRPEND0
+#define isr_1__INTC_MASK 0x01u
+#define isr_1__INTC_NUMBER 0u
+#define isr_1__INTC_PRIOR_NUM 7u
+#define isr_1__INTC_PRIOR_REG CYREG_NVIC_PRI_0
+#define isr_1__INTC_SET_EN_REG CYREG_NVIC_SETENA0
+#define isr_1__INTC_SET_PD_REG CYREG_NVIC_SETPEND0
+
 /* MISO_1 */
 #define MISO_1__0__INTTYPE CYREG_PICU0_INTTYPE0
 #define MISO_1__0__MASK 0x01u
@@ -348,7 +358,7 @@
 #define CYDEV_ECC_ENABLE 0
 #define CYDEV_HEAP_SIZE 0x80
 #define CYDEV_INSTRUCT_CACHE_ENABLED 1
-#define CYDEV_INTR_RISING 0x00000000u
+#define CYDEV_INTR_RISING 0x00000001u
 #define CYDEV_IS_EXPORTING_CODE 0
 #define CYDEV_IS_IMPORTING_CODE 0
 #define CYDEV_PROJ_TYPE 0

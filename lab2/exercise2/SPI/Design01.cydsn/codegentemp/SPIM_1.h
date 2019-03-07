@@ -154,7 +154,7 @@ extern uint8 SPIM_1_initVar;
 
 #define SPIM_1_INT_ON_RX_FULL         ((uint8) (0u << \
                                                                           SPIM_1_STS_RX_FIFO_FULL_SHIFT))
-#define SPIM_1_INT_ON_RX_NOT_EMPTY    ((uint8) (0u << \
+#define SPIM_1_INT_ON_RX_NOT_EMPTY    ((uint8) (1u << \
                                                                           SPIM_1_STS_RX_FIFO_NOT_EMPTY_SHIFT))
 #define SPIM_1_INT_ON_RX_OVER         ((uint8) (0u << \
                                                                           SPIM_1_STS_RX_FIFO_OVERRUN_SHIFT))

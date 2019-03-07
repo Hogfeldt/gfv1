@@ -32,6 +32,8 @@
   <file name="C:\Ase\Semester3\GFV\Git_repos\gfv1\lab2\exercise2\SPI\Design01.cydsn\codegentemp\SPIM_1_PM.c" value="SOURCE_C;CortexM3;;;;SPIM_1" />
   <file name="C:\Ase\Semester3\GFV\Git_repos\gfv1\lab2\exercise2\SPI\Design01.cydsn\codegentemp\SPIM_1_INT.c" value="SOURCE_C;CortexM3;;;;SPIM_1" />
   <file name="C:\Ase\Semester3\GFV\Git_repos\gfv1\lab2\exercise2\SPI\Design01.cydsn\codegentemp\SPIM_1_PVT.h" value="HEADER;;;;;SPIM_1" />
+  <file name="C:\Ase\Semester3\GFV\Git_repos\gfv1\lab2\exercise2\SPI\Design01.cydsn\codegentemp\isr_1.c" value="SOURCE_C;CortexM3;;;;isr_1" />
+  <file name="C:\Ase\Semester3\GFV\Git_repos\gfv1\lab2\exercise2\SPI\Design01.cydsn\codegentemp\isr_1.h" value="HEADER;;;;;isr_1" />
   <file name="C:\Ase\Semester3\GFV\Git_repos\gfv1\lab2\exercise2\SPI\Design01.cydsn\codegentemp\SPIM_1_IntClock.c" value="SOURCE_C;CortexM3;;;;SPIM_1_IntClock" />
   <file name="C:\Ase\Semester3\GFV\Git_repos\gfv1\lab2\exercise2\SPI\Design01.cydsn\codegentemp\SPIM_1_IntClock.h" value="HEADER;;;;;SPIM_1_IntClock" />
   <file name="C:\Ase\Semester3\GFV\Git_repos\gfv1\lab2\exercise2\SPI\Design01.cydsn\codegentemp\cm3gcc.ld" value="LINKER_SCRIPT;;;b98f980c-3bd1-4fc7-a887-c56a20a46fdd;;cy_boot" />

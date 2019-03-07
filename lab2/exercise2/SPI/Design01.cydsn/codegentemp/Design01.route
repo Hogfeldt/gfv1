@@ -423,22 +423,22 @@ net \SPIM_1:BSPIM:mosi_from_dp\
 end \SPIM_1:BSPIM:mosi_from_dp\
 net \SPIM_1:BSPIM:cnt_enable\
 	term   ":udb@[UDB=(3,4)]:pld1:mc0.q"
-	switch ":udb@[UDB=(3,4)]:pld1:mc0.q==>:udb@[UDB=(3,4)]:pld1:output_permute1.q_0"
-	switch ":udb@[UDB=(3,4)]:pld1:output_permute1.output_1==>Stub-:udbswitch@[UDB=(2,4)][side=top]:v37"
-	switch "OStub-:udbswitch@[UDB=(2,4)][side=top]:v37"
-	switch ":udbswitch@[UDB=(2,4)][side=top]:37,35"
-	switch ":udbswitch@[UDB=(2,4)][side=top]:52,35_f"
-	switch ":udbswitch@[UDB=(2,4)][side=top]:52,31_b"
-	switch ":hvswitch@[UDB=(2,4)][side=left]:hseg_31_f"
-	switch ":udbswitch@[UDB=(2,5)][side=top]:101,31_f"
-	switch "IStub-:udbswitch@[UDB=(2,5)][side=top]:v101"
-	switch "Stub-:udbswitch@[UDB=(2,5)][side=top]:v101==>:udb@[UDB=(3,5)]:c7_en_mux.in_2"
+	switch ":udb@[UDB=(3,4)]:pld1:mc0.q==>:udb@[UDB=(3,4)]:pld1:output_permute3.q_0"
+	switch ":udb@[UDB=(3,4)]:pld1:output_permute3.output_3==>Stub-:udbswitch@[UDB=(2,4)][side=top]:v33"
+	switch "OStub-:udbswitch@[UDB=(2,4)][side=top]:v33"
+	switch ":udbswitch@[UDB=(2,4)][side=top]:33,47"
+	switch ":udbswitch@[UDB=(2,4)][side=top]:48,47_f"
+	switch ":udbswitch@[UDB=(2,4)][side=top]:48,43_b"
+	switch ":hvswitch@[UDB=(2,4)][side=left]:hseg_43_f"
+	switch ":udbswitch@[UDB=(2,5)][side=top]:97,43_f"
+	switch "IStub-:udbswitch@[UDB=(2,5)][side=top]:v97"
+	switch "Stub-:udbswitch@[UDB=(2,5)][side=top]:v97==>:udb@[UDB=(3,5)]:c7_en_mux.in_0"
 	switch ":udb@[UDB=(3,5)]:c7_en_mux.c7_en==>:udb@[UDB=(3,5)]:count7cell.enable"
 	term   ":udb@[UDB=(3,5)]:count7cell.enable"
-	switch ":udbswitch@[UDB=(2,4)][side=top]:37,32"
-	switch ":udbswitch@[UDB=(2,4)][side=top]:61,32_f"
-	switch "IStub-:udbswitch@[UDB=(2,4)][side=top]:v61"
-	switch "Stub-:udbswitch@[UDB=(2,4)][side=top]:v61==>:udb@[UDB=(3,4)]:pld1:input_permute.input_1"
+	switch ":udbswitch@[UDB=(2,4)][side=top]:33,71"
+	switch ":udbswitch@[UDB=(2,4)][side=top]:49,71_f"
+	switch "IStub-:udbswitch@[UDB=(2,4)][side=top]:v49"
+	switch "Stub-:udbswitch@[UDB=(2,4)][side=top]:v49==>:udb@[UDB=(3,4)]:pld1:input_permute.input_7"
 	switch ":udb@[UDB=(3,4)]:pld1:input_permute.mc0_main_3==>:udb@[UDB=(3,4)]:pld1:mc0.main_3"
 	term   ":udb@[UDB=(3,4)]:pld1:mc0.main_3"
 end \SPIM_1:BSPIM:cnt_enable\
@@ -517,7 +517,7 @@ net \SPIM_1:BSPIM:load_cond\
 	switch ":udb@[UDB=(3,4)]:pld0:input_permute.mc0_main_8==>:udb@[UDB=(3,4)]:pld0:mc0.main_8"
 	term   ":udb@[UDB=(3,4)]:pld0:mc0.main_8"
 end \SPIM_1:BSPIM:load_cond\
-net Net_10
+net Net_17
 	term   ":udb@[UDB=(2,4)]:pld0:mc0.q"
 	switch ":udb@[UDB=(2,4)]:pld0:mc0.q==>:udb@[UDB=(2,4)]:pld0:output_permute1.q_0"
 	switch ":udb@[UDB=(2,4)]:pld0:output_permute1.output_1==>Stub-:udbswitch@[UDB=(2,4)][side=top]:v26"
@@ -528,7 +528,7 @@ net Net_10
 	switch "Stub-:udbswitch@[UDB=(2,4)][side=top]:v4==>:udb@[UDB=(2,4)]:pld0:input_permute.input_2"
 	switch ":udb@[UDB=(2,4)]:pld0:input_permute.mc0_main_3==>:udb@[UDB=(2,4)]:pld0:mc0.main_3"
 	term   ":udb@[UDB=(2,4)]:pld0:mc0.main_3"
-end Net_10
+end Net_17
 net \SPIM_1:Net_276\
 	term   ":clockblockcell.dclk_glb_0"
 	switch ":clockblockcell.dclk_glb_0==>:udb@[UDB=(3,5)]:clockreset:clk_sc_mux.in_0"
@@ -572,7 +572,25 @@ net ClockBlock_BUS_CLK
 	term   ":clockblockcell.clk_bus_glb"
 	switch ":clockblockcell.clk_bus_glb==>:udb@[UDB=(3,5)]:dp_wrapper:datapath.busclk"
 	term   ":udb@[UDB=(3,5)]:dp_wrapper:datapath.busclk"
+	switch ":clockblockcell.clk_bus_glb==>:interrupt_0.clock"
+	term   ":interrupt_0.clock"
 end ClockBlock_BUS_CLK
+net Net_13
+	term   ":udb@[UDB=(3,4)]:statusicell.interrupt"
+	switch ":udb@[UDB=(3,4)]:statusicell.interrupt==>:udb@[UDB=(3,4)]:statuscell_status_7_permute.in_0"
+	switch ":udb@[UDB=(3,4)]:statuscell_status_7_permute.statuscell_status_7==>Stub-:udbswitch@[UDB=(2,4)][side=top]:v103"
+	switch "OStub-:udbswitch@[UDB=(2,4)][side=top]:v103"
+	switch ":udbswitch@[UDB=(2,4)][side=top]:103,49_b"
+	switch ":hvswitch@[UDB=(2,4)][side=left]:2,49_f"
+	switch ":hvswitch@[UDB=(3,4)][side=left]:vseg_2_top_f"
+	switch ":hvswitch@[UDB=(3,4)][side=left]:2,85_b"
+	switch ":hvswitch@[UDB=(3,4)][side=left]:hseg_85_f"
+	switch ":dsiswitch_bottom@[DSI=(1,5)][side=bottom]:dsihc_bottom:50,85_f"
+	switch "IStub-:dsiswitch_bottom@[DSI=(1,5)][side=bottom]:dsihc_bottom:v48+:dsiswitch_bottom@[DSI=(1,5)][side=bottom]:dsihc_bottom:v50"
+	switch "Stub-:dsiswitch_bottom@[DSI=(1,5)][side=bottom]:dsihc_bottom:v48+:dsiswitch_bottom@[DSI=(1,5)][side=bottom]:dsihc_bottom:v50==>:interrupt_idmux_0.in_2"
+	switch ":interrupt_idmux_0.interrupt_idmux_0__out==>:interrupt_0.interrupt"
+	term   ":interrupt_0.interrupt"
+end Net_13
 net Net_19
 	term   ":ioport0:pin0.fb"
 	switch ":ioport0:pin0.fb==>Stub-:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v0+:dsiswitch_bottom@[DSI=(1,4)][side=bottom]:dsihc_bottom:v2"
@@ -618,11 +636,11 @@ net \SPIM_1:BSPIM:tx_status_2\
 end \SPIM_1:BSPIM:tx_status_2\
 net \SPIM_1:BSPIM:tx_status_4\
 	term   ":udb@[UDB=(2,4)]:pld0:mc1.q"
-	switch ":udb@[UDB=(2,4)]:pld0:mc1.q==>:udb@[UDB=(2,4)]:pld0:output_permute3.q_1"
-	switch ":udb@[UDB=(2,4)]:pld0:output_permute3.output_3==>Stub-:udbswitch@[UDB=(2,4)][side=top]:v30"
-	switch "OStub-:udbswitch@[UDB=(2,4)][side=top]:v30"
-	switch ":udbswitch@[UDB=(2,4)][side=top]:30,43"
-	switch ":udbswitch@[UDB=(2,4)][side=top]:96,43_f"
+	switch ":udb@[UDB=(2,4)]:pld0:mc1.q==>:udb@[UDB=(2,4)]:pld0:output_permute0.q_1"
+	switch ":udb@[UDB=(2,4)]:pld0:output_permute0.output_0==>Stub-:udbswitch@[UDB=(2,4)][side=top]:v24"
+	switch "OStub-:udbswitch@[UDB=(2,4)][side=top]:v24"
+	switch ":udbswitch@[UDB=(2,4)][side=top]:24,74"
+	switch ":udbswitch@[UDB=(2,4)][side=top]:96,74_f"
 	switch "IStub-:udbswitch@[UDB=(2,4)][side=top]:v96"
 	switch "Stub-:udbswitch@[UDB=(2,4)][side=top]:v96==>:udb@[UDB=(2,4)]:statusicell.status_4"
 	term   ":udb@[UDB=(2,4)]:statusicell.status_4"
