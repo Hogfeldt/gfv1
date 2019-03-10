@@ -116,12 +116,12 @@ Launch Clock Path
 pin name                                                    model name      delay     AT  edge  Fanout
 ----------------------------------------------------------  --------------  -----  -----  ----  ------
 ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
-Rx_1(0)/in_clock                                            iocell5             0      0  RISE       1
+Rx_1(0)/in_clock                                            iocell6             0      0  RISE       1
 
 Data path
 pin name                                  model name     delay     AT  slack  edge  Fanout
 ----------------------------------------  -------------  -----  -----  -----  ----  ------
-Rx_1(0)/fb                                iocell5         2009   2009  25957  RISE       1
+Rx_1(0)/fb                                iocell6         2009   2009  25957  RISE       1
 \UART_1:BUART:rx_postpoll\/main_1         macrocell10     4632   6641  25957  RISE       1
 \UART_1:BUART:rx_postpoll\/q              macrocell10     3350   9991  25957  RISE       1
 \UART_1:BUART:sRX:RxShifter:u0\/route_si  datapathcell4   2249  12240  25957  RISE       1
@@ -264,12 +264,12 @@ Launch Clock Path
 pin name                                                    model name      delay     AT  edge  Fanout
 ----------------------------------------------------------  --------------  -----  -----  ----  ------
 ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
-Rx_1(0)/in_clock                                            iocell5             0      0  RISE       1
+Rx_1(0)/in_clock                                            iocell6             0      0  RISE       1
 
 Data path
 pin name                                  model name     delay     AT  slack  edge  Fanout
 ----------------------------------------  -------------  -----  -----  -----  ----  ------
-Rx_1(0)/fb                                iocell5         2009   2009  25957  RISE       1
+Rx_1(0)/fb                                iocell6         2009   2009  25957  RISE       1
 \UART_1:BUART:rx_postpoll\/main_1         macrocell10     4632   6641  25957  RISE       1
 \UART_1:BUART:rx_postpoll\/q              macrocell10     3350   9991  25957  RISE       1
 \UART_1:BUART:sRX:RxShifter:u0\/route_si  datapathcell4   2249  12240  25957  RISE       1
@@ -402,12 +402,12 @@ Launch Clock Path
 pin name                                                    model name      delay     AT  edge  Fanout
 ----------------------------------------------------------  --------------  -----  -----  ----  ------
 ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
-Rx_1(0)/in_clock                                            iocell5             0      0  RISE       1
+Rx_1(0)/in_clock                                            iocell6             0      0  RISE       1
 
 Data path
 pin name                                  model name     delay     AT  slack  edge  Fanout
 ----------------------------------------  -------------  -----  -----  -----  ----  ------
-Rx_1(0)/fb                                iocell5         2009   2009  25957  RISE       1
+Rx_1(0)/fb                                iocell6         2009   2009  25957  RISE       1
 \UART_1:BUART:rx_postpoll\/main_1         macrocell10     4632   6641  25957  RISE       1
 \UART_1:BUART:rx_postpoll\/q              macrocell10     3350   9991  25957  RISE       1
 \UART_1:BUART:sRX:RxShifter:u0\/route_si  datapathcell4   2249  12240  25957  RISE       1
@@ -444,12 +444,12 @@ Launch Clock Path
 pin name                                                    model name      delay     AT  edge  Fanout
 ----------------------------------------------------------  --------------  -----  -----  ----  ------
 ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
-Rx_1(0)/in_clock                                            iocell5             0      0  RISE       1
+Rx_1(0)/in_clock                                            iocell6             0      0  RISE       1
 
 Data path
 pin name                           model name   delay     AT  slack  edge  Fanout
 ---------------------------------  -----------  -----  -----  -----  ----  ------
-Rx_1(0)/fb                         iocell5       2009   2009  25957  RISE       1
+Rx_1(0)/fb                         iocell6       2009   2009  25957  RISE       1
 \UART_1:BUART:pollcount_1\/main_3  macrocell33   6402   8411  29745  RISE       1
 
 Capture Clock Path
@@ -484,12 +484,12 @@ Launch Clock Path
 pin name                                                    model name      delay     AT  edge  Fanout
 ----------------------------------------------------------  --------------  -----  -----  ----  ------
 ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
-Rx_1(0)/in_clock                                            iocell5             0      0  RISE       1
+Rx_1(0)/in_clock                                            iocell6             0      0  RISE       1
 
 Data path
 pin name                           model name   delay     AT  slack  edge  Fanout
 ---------------------------------  -----------  -----  -----  -----  ----  ------
-Rx_1(0)/fb                         iocell5       2009   2009  25957  RISE       1
+Rx_1(0)/fb                         iocell6       2009   2009  25957  RISE       1
 \UART_1:BUART:pollcount_0\/main_2  macrocell34   6402   8411  29745  RISE       1
 
 Capture Clock Path
@@ -524,12 +524,12 @@ Launch Clock Path
 pin name                                                    model name      delay     AT  edge  Fanout
 ----------------------------------------------------------  --------------  -----  -----  ----  ------
 ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
-Rx_1(0)/in_clock                                            iocell5             0      0  RISE       1
+Rx_1(0)/in_clock                                            iocell6             0      0  RISE       1
 
 Data path
 pin name                          model name   delay     AT  slack  edge  Fanout
 --------------------------------  -----------  -----  -----  -----  ----  ------
-Rx_1(0)/fb                        iocell5       2009   2009  25957  RISE       1
+Rx_1(0)/fb                        iocell6       2009   2009  25957  RISE       1
 \UART_1:BUART:rx_state_2\/main_8  macrocell30   5496   7505  30652  RISE       1
 
 Capture Clock Path
@@ -564,12 +564,12 @@ Launch Clock Path
 pin name                                                    model name      delay     AT  edge  Fanout
 ----------------------------------------------------------  --------------  -----  -----  ----  ------
 ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
-Rx_1(0)/in_clock                                            iocell5             0      0  RISE       1
+Rx_1(0)/in_clock                                            iocell6             0      0  RISE       1
 
 Data path
 pin name                       model name   delay     AT  slack  edge  Fanout
 -----------------------------  -----------  -----  -----  -----  ----  ------
-Rx_1(0)/fb                     iocell5       2009   2009  25957  RISE       1
+Rx_1(0)/fb                     iocell6       2009   2009  25957  RISE       1
 \UART_1:BUART:rx_last\/main_0  macrocell36   5496   7505  30652  RISE       1
 
 Capture Clock Path
@@ -604,12 +604,12 @@ Launch Clock Path
 pin name                                                    model name      delay     AT  edge  Fanout
 ----------------------------------------------------------  --------------  -----  -----  ----  ------
 ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
-Rx_1(0)/in_clock                                            iocell5             0      0  RISE       1
+Rx_1(0)/in_clock                                            iocell6             0      0  RISE       1
 
 Data path
 pin name                          model name   delay     AT  slack  edge  Fanout
 --------------------------------  -----------  -----  -----  -----  ----  ------
-Rx_1(0)/fb                        iocell5       2009   2009  25957  RISE       1
+Rx_1(0)/fb                        iocell6       2009   2009  25957  RISE       1
 \UART_1:BUART:rx_state_0\/main_9  macrocell27   4632   6641  31515  RISE       1
 
 Capture Clock Path
@@ -644,12 +644,12 @@ Launch Clock Path
 pin name                                                    model name      delay     AT  edge  Fanout
 ----------------------------------------------------------  --------------  -----  -----  ----  ------
 ClockBlock/clk_bus_glb                                      clockblockcell      0      0  RISE       1
-Rx_1(0)/in_clock                                            iocell5             0      0  RISE       1
+Rx_1(0)/in_clock                                            iocell6             0      0  RISE       1
 
 Data path
 pin name                           model name   delay     AT  slack  edge  Fanout
 ---------------------------------  -----------  -----  -----  -----  ----  ------
-Rx_1(0)/fb                         iocell5       2009   2009  25957  RISE       1
+Rx_1(0)/fb                         iocell6       2009   2009  25957  RISE       1
 \UART_1:BUART:rx_status_3\/main_6  macrocell35   4632   6641  31515  RISE       1
 
 Capture Clock Path

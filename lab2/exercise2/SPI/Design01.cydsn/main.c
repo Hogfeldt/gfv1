@@ -38,6 +38,13 @@ int main(void)
     
     for(;;)
     {
+        /*SPIM_1_ClearTxBuffer();
+        UART_1_PutString("\r\nAsking for switch status: t\r\n");
+        SPIM_1_WriteTxData('s');
+        uint8_t data = SW_Read();
+        char buf[256];
+        sprintf(buf,"data: %d \r\n",data);
+        UART_1_PutString(buf);*/
         
     }
 }
@@ -59,6 +66,8 @@ CY_ISR(ISR_UART_rx_handler)
 CY_ISR(isr_1)
 {
     fromSlave = SPIM_1_ReadRxData();
+    if(fromSlave == 48){fromSlave = 0;}
+    else if(fromSlave == 49){fromSlave = 1;}
     char tempBuf[256];
     sprintf(tempBuf,"Recieved data: %d \r\n",fromSlave);
     
