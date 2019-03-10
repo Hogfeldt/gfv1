@@ -1,25 +1,61 @@
 dont_use_io iocell 1 0
 dont_use_io iocell 1 1
 dont_use_io iocell 1 3
-set_location "\SPIM_1:BSPIM:state_0\" macrocell 2 5 1 2
-set_location "\SPIM_1:BSPIM:tx_status_0\" macrocell 2 5 1 0
-set_location "\SPIM_1:BSPIM:cnt_enable\" macrocell 3 4 1 0
-set_location "\SPIM_1:BSPIM:rx_status_6\" macrocell 3 4 0 2
-set_location "\SPIM_1:BSPIM:BitCounter\" count7cell 3 5 7 
-set_location "\SPIM_1:BSPIM:load_cond\" macrocell 3 4 0 0
-set_location "Net_25" macrocell 3 4 1 1
-set_location "\SPIM_1:BSPIM:tx_status_4\" macrocell 2 4 0 1
-set_location "\SPIM_1:BSPIM:state_1\" macrocell 3 5 1 0
-set_location "\SPIM_1:BSPIM:TxStsReg\" statusicell 2 4 4 
-set_location "\SPIM_1:BSPIM:state_2\" macrocell 3 5 1 1
-set_location "Net_23" macrocell 3 5 0 0
-set_location "\SPIM_1:BSPIM:ld_ident\" macrocell 3 5 1 2
-set_location "\SPIM_1:BSPIM:sR8:Dp:u0\" datapathcell 3 5 2 
-set_location "\SPIM_1:BSPIM:load_rx_data\" macrocell 3 5 0 1
-set_location "\SPIM_1:BSPIM:RxStsReg\" statusicell 3 4 4 
-set_location "Net_17" macrocell 2 4 0 0
-set_io "SCLK_1(0)" iocell 0 2
-set_io "MOSI_1(0)" iocell 0 1
-set_io "MISO_1(0)" iocell 0 0
-set_location "isr_1" interrupt -1 -1 0
+set_location "\SPIM_1:BSPIM:state_0\" macrocell 3 1 1 1
+set_location "\SPIM_1:BSPIM:tx_status_0\" macrocell 3 1 0 2
+set_location "\UART_1:BUART:tx_ctrl_mark_last\" macrocell 0 1 0 3
+set_location "\SPIM_1:BSPIM:cnt_enable\" macrocell 1 0 0 0
+set_location "\UART_1:BUART:rx_bitclk_enable\" macrocell 0 0 1 3
+set_location "\SPIM_1:BSPIM:rx_status_6\" macrocell 3 1 1 2
+set_location "\UART_1:BUART:sRX:RxShifter:u0\" datapathcell 0 1 2 
+set_location "\UART_1:BUART:sTX:TxSts\" statusicell 1 0 4 
+set_location "\UART_1:BUART:txn\" macrocell 2 0 1 0
+set_location "\UART_1:BUART:rx_status_5\" macrocell 0 0 0 2
+set_location "\SPIM_1:BSPIM:BitCounter\" count7cell 3 1 7 
+set_location "\UART_1:BUART:sRX:RxBitCounter\" count7cell 0 1 7 
+set_location "\UART_1:BUART:counter_load_not\" macrocell 2 0 0 1
+set_location "\SPIM_1:BSPIM:load_cond\" macrocell 3 1 1 0
+set_location "\UART_1:BUART:rx_status_4\" macrocell 0 0 0 3
+set_location "Net_25" macrocell 3 0 1 1
+set_location "Net_126" macrocell 2 1 0 1
+set_location "\UART_1:BUART:sRX:RxSts\" statusicell 0 0 4 
+set_location "\UART_1:BUART:pollcount_0\" macrocell 0 0 1 2
+set_location "\UART_1:BUART:rx_state_0\" macrocell 0 1 0 0
+set_location "\UART_1:BUART:rx_counter_load\" macrocell 0 0 0 0
+set_location "\UART_1:BUART:pollcount_1\" macrocell 0 0 1 0
+set_location "\UART_1:BUART:tx_status_0\" macrocell 1 0 1 1
+set_location "\SPIM_1:BSPIM:tx_status_4\" macrocell 3 1 0 3
+set_location "\UART_1:BUART:rx_last\" macrocell 2 1 0 0
+set_location "\SPIM_1:BSPIM:state_1\" macrocell 3 0 0 0
+set_location "\UART_1:BUART:tx_status_2\" macrocell 1 0 0 3
+set_location "\UART_1:BUART:rx_postpoll\" macrocell 0 0 1 1
+set_location "\UART_1:BUART:rx_load_fifo\" macrocell 0 1 1 1
+set_location "\UART_1:BUART:tx_state_1\" macrocell 2 0 1 1
+set_location "\UART_1:BUART:rx_state_2\" macrocell 0 1 1 0
+set_location "\UART_1:BUART:tx_bitclk\" macrocell 1 0 1 3
+set_location "\UART_1:BUART:tx_state_0\" macrocell 1 0 1 0
+set_location "\SPIM_1:BSPIM:TxStsReg\" statusicell 3 0 4 
+set_location "\SPIM_1:BSPIM:state_2\" macrocell 3 0 0 1
+set_location "Net_23" macrocell 3 1 0 0
+set_location "\UART_1:BUART:rx_status_3\" macrocell 0 1 1 2
+set_location "\UART_1:BUART:rx_state_stop1_reg\" macrocell 1 0 1 2
+set_location "\SPIM_1:BSPIM:ld_ident\" macrocell 3 0 0 2
+set_location "\UART_1:BUART:sTX:sCLOCK:TxBitClkGen\" datapathcell 2 0 2 
+set_location "\SPIM_1:BSPIM:load_rx_data\" macrocell 3 1 0 1
+set_location "\UART_1:BUART:tx_state_2\" macrocell 2 0 0 0
+set_location "\SPIM_1:BSPIM:RxStsReg\" statusicell 2 0 4 
+set_location "\SPIM_1:BSPIM:sR8:Dp:u0\" datapathcell 3 1 2 
+set_location "\UART_1:BUART:sTX:TxShifter:u0\" datapathcell 1 1 2 
+set_location "\UART_1:BUART:rx_state_3\" macrocell 0 1 0 2
+set_location "Net_17" macrocell 3 0 1 0
+# Note: port 12 is the logical name for port 7
+set_io "Rx_1(0)" iocell 12 6
 set_location "ClockBlock" clockblockcell -1 -1 0
+set_io "SCLK_1(0)" iocell 3 3
+# Note: port 15 is the logical name for port 8
+set_io "MOSI_1(0)" iocell 15 1
+set_io "MISO_1(0)" iocell 3 7
+# Note: port 12 is the logical name for port 7
+set_io "Tx_1(0)" iocell 12 7
+set_location "isr_1" interrupt -1 -1 0
+set_location "isr_uart_rx" interrupt -1 -1 1
