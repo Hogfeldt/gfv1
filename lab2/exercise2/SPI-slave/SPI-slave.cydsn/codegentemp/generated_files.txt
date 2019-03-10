@@ -33,11 +33,14 @@
   <file name="C:\Users\hogfe\Documents\IKT\gfv\gfv1\lab2\exercise2\SPI-slave\SPI-slave.cydsn\codegentemp\MISO_1_aliases.h" value="HEADER;;;;;MISO_1" />
   <file name="C:\Users\hogfe\Documents\IKT\gfv\gfv1\lab2\exercise2\SPI-slave\SPI-slave.cydsn\codegentemp\MISO_1.c" value="SOURCE_C;CortexM3;;;;MISO_1" />
   <file name="C:\Users\hogfe\Documents\IKT\gfv\gfv1\lab2\exercise2\SPI-slave\SPI-slave.cydsn\codegentemp\MISO_1.h" value="HEADER;;;;;MISO_1" />
-  <file name="C:\Users\hogfe\Documents\IKT\gfv\gfv1\lab2\exercise2\SPI-slave\SPI-slave.cydsn\codegentemp\Pin_1_aliases.h" value="HEADER;;;;;Pin_1" />
-  <file name="C:\Users\hogfe\Documents\IKT\gfv\gfv1\lab2\exercise2\SPI-slave\SPI-slave.cydsn\codegentemp\Pin_1.c" value="SOURCE_C;CortexM3;;;;Pin_1" />
-  <file name="C:\Users\hogfe\Documents\IKT\gfv\gfv1\lab2\exercise2\SPI-slave\SPI-slave.cydsn\codegentemp\Pin_1.h" value="HEADER;;;;;Pin_1" />
+  <file name="C:\Users\hogfe\Documents\IKT\gfv\gfv1\lab2\exercise2\SPI-slave\SPI-slave.cydsn\codegentemp\LED_aliases.h" value="HEADER;;;;;LED" />
+  <file name="C:\Users\hogfe\Documents\IKT\gfv\gfv1\lab2\exercise2\SPI-slave\SPI-slave.cydsn\codegentemp\LED.c" value="SOURCE_C;CortexM3;;;;LED" />
+  <file name="C:\Users\hogfe\Documents\IKT\gfv\gfv1\lab2\exercise2\SPI-slave\SPI-slave.cydsn\codegentemp\LED.h" value="HEADER;;;;;LED" />
   <file name="C:\Users\hogfe\Documents\IKT\gfv\gfv1\lab2\exercise2\SPI-slave\SPI-slave.cydsn\codegentemp\isr_1.c" value="SOURCE_C;CortexM3;;;;isr_1" />
   <file name="C:\Users\hogfe\Documents\IKT\gfv\gfv1\lab2\exercise2\SPI-slave\SPI-slave.cydsn\codegentemp\isr_1.h" value="HEADER;;;;;isr_1" />
+  <file name="C:\Users\hogfe\Documents\IKT\gfv\gfv1\lab2\exercise2\SPI-slave\SPI-slave.cydsn\codegentemp\SW_aliases.h" value="HEADER;;;;;SW" />
+  <file name="C:\Users\hogfe\Documents\IKT\gfv\gfv1\lab2\exercise2\SPI-slave\SPI-slave.cydsn\codegentemp\SW.c" value="SOURCE_C;CortexM3;;;;SW" />
+  <file name="C:\Users\hogfe\Documents\IKT\gfv\gfv1\lab2\exercise2\SPI-slave\SPI-slave.cydsn\codegentemp\SW.h" value="HEADER;;;;;SW" />
   <file name="C:\Users\hogfe\Documents\IKT\gfv\gfv1\lab2\exercise2\SPI-slave\SPI-slave.cydsn\codegentemp\SPIS_1_IntClock.c" value="SOURCE_C;CortexM3;;;;SPIS_1_IntClock" />
   <file name="C:\Users\hogfe\Documents\IKT\gfv\gfv1\lab2\exercise2\SPI-slave\SPI-slave.cydsn\codegentemp\SPIS_1_IntClock.h" value="HEADER;;;;;SPIS_1_IntClock" />
   <file name="C:\Users\hogfe\Documents\IKT\gfv\gfv1\lab2\exercise2\SPI-slave\SPI-slave.cydsn\codegentemp\cm3gcc.ld" value="LINKER_SCRIPT;;;b98f980c-3bd1-4fc7-a887-c56a20a46fdd;;cy_boot" />

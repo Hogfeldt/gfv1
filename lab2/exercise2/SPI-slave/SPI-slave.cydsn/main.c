@@ -10,33 +10,44 @@
  * ========================================
 */
 #include "project.h"
+#include "stdio.h"
+
+CY_ISR(bob);
 
 int main(void)
 {
-    SPIS_1_Start();
     CyGlobalIntEnable; /* Enable global interrupts. */
-
+    SPIS_1_Start();
+    isr_1_StartEx(bob);
     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
 
-    Pin_1_Write(1);
+    LED_Write(0);
     for(;;)
     {
-        uint8_t modtaget;
-        while(!SPIS_1_ReadRxStatus()) {
-            modtaget = SPIS_1_ReadRxData();
-            SPIS_1_ClearRxBuffer();
-        }
-        
-        /* Place your application code here. */
+        /*
+        SPIS_1_ClearTxBuffer();
+        uint8_t switch_state = SW_Read();
+        if(switch_state == 1) {
+            SPIS_1_WriteTxData('1');
+            //LED_Write(1);
+        } else if (switch_state == 0) {
+            SPIS_1_WriteTxData('0');
+            //LED_Write(0);
+        }*/
     }
 }
 
-CY_ISR(isr_1) {
-    if(Pin_1_Read() == 1){
-        Pin_1_Write(0);
-    } else {
-        Pin_1_Write(1);
-    }
+CY_ISR(bob) {
+    uint8_t data = SPIS_1_ReadRxData();
+    if(data == 't') {
+        SPIS_1_ClearRxBuffer();
+        LED_Write(1);
+        SPIS_1_WriteTxData('t');
+    } else if(data == 'n') {
+        SPIS_1_ClearRxBuffer();
+        LED_Write(0);
+        SPIS_1_WriteTxData('n');
+    }    
     
 }
 
