@@ -36,6 +36,9 @@
   <file name="C:\Ase\Semester3\GFV\Git_repos\gfv1\lab2\exercise2\SPI\Design01.cydsn\codegentemp\isr_1.h" value="HEADER;;;;;isr_1" />
   <file name="C:\Ase\Semester3\GFV\Git_repos\gfv1\lab2\exercise2\SPI\Design01.cydsn\codegentemp\isr_uart_rx.c" value="SOURCE_C;CortexM3;;;;isr_uart_rx" />
   <file name="C:\Ase\Semester3\GFV\Git_repos\gfv1\lab2\exercise2\SPI\Design01.cydsn\codegentemp\isr_uart_rx.h" value="HEADER;;;;;isr_uart_rx" />
+  <file name="C:\Ase\Semester3\GFV\Git_repos\gfv1\lab2\exercise2\SPI\Design01.cydsn\codegentemp\SW_aliases.h" value="HEADER;;;;;SW" />
+  <file name="C:\Ase\Semester3\GFV\Git_repos\gfv1\lab2\exercise2\SPI\Design01.cydsn\codegentemp\SW.c" value="SOURCE_C;CortexM3;;;;SW" />
+  <file name="C:\Ase\Semester3\GFV\Git_repos\gfv1\lab2\exercise2\SPI\Design01.cydsn\codegentemp\SW.h" value="HEADER;;;;;SW" />
   <file name="C:\Ase\Semester3\GFV\Git_repos\gfv1\lab2\exercise2\SPI\Design01.cydsn\codegentemp\UART_1.c" value="SOURCE_C;CortexM3;;;;UART_1" />
   <file name="C:\Ase\Semester3\GFV\Git_repos\gfv1\lab2\exercise2\SPI\Design01.cydsn\codegentemp\UART_1.h" value="HEADER;;;;;UART_1" />
   <file name="C:\Ase\Semester3\GFV\Git_repos\gfv1\lab2\exercise2\SPI\Design01.cydsn\codegentemp\UART_1_PM.c" value="SOURCE_C;CortexM3;;;;UART_1" />

@@ -29,6 +29,8 @@
 #include "SPIM_1_PVT.h"
 #include "isr_1.h"
 #include "isr_uart_rx.h"
+#include "SW_aliases.h"
+#include "SW.h"
 #include "UART_1.h"
 #include "SPIM_1_IntClock.h"
 #include "UART_1_IntClock.h"
