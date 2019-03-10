@@ -20,6 +20,7 @@ set_location "\SPIS_1:BSPIS:rx_buf_overrun\" macrocell 1 4 0 3
 set_location "\SPIS_1:BSPIS:sync_4\" synccell 0 4 5 0
 set_io "MOSI_1(0)" iocell 1 6
 set_io "SCLK_1(0)" iocell 1 7
+set_io "SW(0)" iocell 2 2
 set_location "\SPIS_1:BSPIS:sync_3\" synccell 0 4 5 1
 set_location "ClockBlock" clockblockcell -1 -1 0
 set_location "\SPIS_1:BSPIS:sync_1\" synccell 0 4 5 2
@@ -27,4 +28,3 @@ set_location "\SPIS_1:BSPIS:sync_2\" synccell 0 4 5 3
 set_io "MISO_1(0)" iocell 1 5
 set_location "isr_1" interrupt -1 -1 0
 set_io "LED(0)" iocell 2 1
-set_io "SW(0)" iocell 2 2

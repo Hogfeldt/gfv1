@@ -1,6 +1,6 @@
 (DELAYFILE
  (SDFVERSION "IEEE 1497 4.0")
- (DATE "2019-03-10T11:56:16Z")
+ (DATE "2019-03-10T12:43:36Z")
  (DESIGN "SPI-slave")
  (VENDOR "Cypress Semiconductor")
  (PROGRAM "PSoC Creator")
