@@ -18,7 +18,8 @@ void turnOnLED(void);
 void turnOffLED(void);
 
 
-uint8_t fromSlave = 0;
+uint8_t fromSlave = 76;
+CY_ISR(isr_1);
 
 int main(void)
 {
@@ -31,6 +32,7 @@ int main(void)
     UART_1_PutString("N: Turn off LED on slave. \r\n");
     
     SPIM_1_Start();
+    isr_1_StartEx(isr_1);
     
     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
     
@@ -59,28 +61,32 @@ CY_ISR(isr_1)
     fromSlave = SPIM_1_ReadRxData();
     char tempBuf[256];
     sprintf(tempBuf,"Recieved data: %d \r\n",fromSlave);
-    UART_1_PutString(tempBuf);
-    if(fromSlave == 'N')
+    
+    if(fromSlave == 'n')
     {
         UART_1_PutString("LED is turn off.\r\n");
     }
-    else if(fromSlave == 'O')
+    else if(fromSlave == 't')
     {
         UART_1_PutString("LED is turned on.\r\n");
     }
+    else{
+        UART_1_PutString(tempBuf);
+    }
     SPIM_1_ClearRxBuffer();
+  
 }
 
 void handleByteReceived(uint8_t byteReceived)
 {
     switch(byteReceived)
     {
-        case 'L' :
+        case 't' :
         {
             turnOnLED();
         }
         break;
-        case 'N' :
+        case 'n' :
         {
             turnOffLED();
         }
@@ -95,8 +101,9 @@ void handleByteReceived(uint8_t byteReceived)
 
 void turnOnLED()
 {
-    SPIM_1_WriteByte(0b00000001);
-    UART_1_PutString("\r\nMessage sent to slave: 0b00000001\r\n");
+    SPIM_1_ClearTxBuffer();
+    SPIM_1_WriteTxData('t');
+    UART_1_PutString("\r\nMessage sent to slave: t\r\n");
     /*while(!SPIM_1_ReadRxStatus()){
             fromSlave = SPIM_1_ReadRxData();
             SPIM_1_ClearRxBuffer();
@@ -106,8 +113,9 @@ void turnOnLED()
 
 void turnOffLED()
 {
-    SPIM_1_WriteByte(0b00000000);
-    UART_1_PutString("\r\nMessage sent to slave: 0b00000000\r\n");
+    SPIM_1_ClearTxBuffer();
+    SPIM_1_WriteTxData('n');
+    UART_1_PutString("\r\nMessage sent to slave: n\r\n");
     //while(!SPIM_1_ReadRxStatus()){
       //      fromSlave = SPIM_1_ReadRxData();
         //    SPIM_1_ClearRxBuffer();
