@@ -252,8 +252,9 @@
   <Group key="DWRInstGuidMapping">
     <Group key="Pin">
       <Data key="42a1c22f-6008-4c86-b67d-059696ab6bd0" value="SCLK_1" />
+      <Data key="45d6eccd-6353-4001-9d38-f2839ae2fceb" value="SW" />
       <Data key="1425177d-0d0e-4468-8bcc-e638e5509a9b" value="MOSI_1" />
-      <Data key="77715107-f8d5-47e5-a629-0fb83101ac6b" value="Pin_1" />
+      <Data key="77715107-f8d5-47e5-a629-0fb83101ac6b" value="LED" />
       <Data key="ed092b9b-d398-4703-be89-cebf998501f6" value="MISO_1" />
     </Group>
   </Group>
@@ -3343,12 +3344,17 @@
   <Group key="Pin2">
     <Group key="42a1c22f-6008-4c86-b67d-059696ab6bd0">
       <Group key="0">
-        <Data key="Port Format" value="0,2" />
+        <Data key="Port Format" value="1,7" />
+      </Group>
+    </Group>
+    <Group key="45d6eccd-6353-4001-9d38-f2839ae2fceb">
+      <Group key="0">
+        <Data key="Port Format" value="2,2" />
       </Group>
     </Group>
     <Group key="1425177d-0d0e-4468-8bcc-e638e5509a9b">
       <Group key="0">
-        <Data key="Port Format" value="0,1" />
+        <Data key="Port Format" value="1,6" />
       </Group>
     </Group>
     <Group key="77715107-f8d5-47e5-a629-0fb83101ac6b">
@@ -3358,7 +3364,7 @@
     </Group>
     <Group key="ed092b9b-d398-4703-be89-cebf998501f6">
       <Group key="0">
-        <Data key="Port Format" value="0,0" />
+        <Data key="Port Format" value="1,5" />
       </Group>
     </Group>
     <Group key="UnAssigned Pins" />
