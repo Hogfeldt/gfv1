@@ -1,3 +1,3 @@
-# Component constraints for C:\Ase\Semester3\GFV\Git_repos\gfv1\lab2\lab2\Design01.cydsn\TopDesign\TopDesign.cysch
-# Project: C:\Ase\Semester3\GFV\Git_repos\gfv1\lab2\lab2\Design01.cydsn\Design01.cyprj
-# Date: Thu, 07 Mar 2019 08:05:27 GMT
+# Component constraints for C:\Users\hogfe\Documents\IKT\gfv\gfv1\lab2\exercise1\Design01.cydsn\TopDesign\TopDesign.cysch
+# Project: C:\Users\hogfe\Documents\IKT\gfv\gfv1\lab2\exercise1\Design01.cydsn\Design01.cyprj
+# Date: Wed, 13 Mar 2019 19:24:11 GMT
