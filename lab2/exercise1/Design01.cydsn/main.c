@@ -14,6 +14,8 @@
 // The next section of code borrowed from the url: 
 // https://stackoverflow.com/questions/2689028/need-fastest-way-to-convert-2s-complement-to-decimal-in-c?rq=1
 // =====================================================================
+
+//I nedenstående kode udregnes to kompliment
 int binTwosComplementToSignedDecimal(char binary[],int significantBits) 
 {
     int power = pow(2,significantBits-1);
@@ -37,23 +39,23 @@ int binTwosComplementToSignedDecimal(char binary[],int significantBits)
 }
 
 void readTemp(uint8 addr) {
-    uint8 temp;
-    uint8 temphalf;
-    uint8 status;
-    char buffer[256];
+    uint8 temp;                     //bruges til hel-tal
+    uint8 temphalf;                 //bruges til halve, f.eks. 0."5"
+    uint8 status;                   //bruges til at fejlfinde
+    char buffer[256];               //bruges til at konvertere modtaget data over i 
     
     status = I2C_1_MasterSendStart(addr,1);
     
-    if(status == I2C_1_MSTR_NO_ERROR){
-        temp = I2C_1_MasterReadByte(I2C_1_ACK_DATA);
-        temphalf = I2C_1_MasterReadByte(I2C_1_NAK_DATA);
+    if(status == I2C_1_MSTR_NO_ERROR){                      //tjekkes om der er fejl
         
-        I2C_1_MasterSendStop();
+        //læser første og anden byte, og skriver tilbage med hhv. ACK og NAK
+        temp = I2C_1_MasterReadByte(I2C_1_ACK_DATA);        
+        temphalf = I2C_1_MasterReadByte(I2C_1_NAK_DATA);    
+        
+        I2C_1_MasterSendStop(); //stopper kommunikationen
         
         int realTemp = binTwosComplementToSignedDecimal(buffer,8);
-       
-        
-        
+      
         uint8 half = (temphalf & 0b10000000) == 0b10000000; 
         if(half) {
         snprintf(buffer, sizeof(buffer),"Read from %d: %d,5\r\n", addr, temp);
@@ -74,7 +76,7 @@ int main(void)
     CyGlobalIntEnable; /* Enable global interrupts. */
     UART_1_PutString("Program starts \n");
     I2C_1_Start();
-    /* Place your initialization/startup code here (e.g. MyInst_Start()) */
+    
     UART_1_Start();
     
     for(;;)
