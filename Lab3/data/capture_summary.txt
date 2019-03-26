@@ -1,0 +1,11 @@
+capture     Kp      ki      kd      comment
+----------------------------------------------------------
+first       2       1/30    0       Succes
+second      4       1/30    0       Succes
+third       8       1/30    0       Succes
+fourth      2       1/30    0       Failed: Kept going up
+fifth       2       2/30    0       Succes
+sixth       2       3/30    0       Succes
+seventh     4       2/30    0       Succes 
+eigth       8       2/30    0       Succes
+ninth       7       5/60    0       Succes
