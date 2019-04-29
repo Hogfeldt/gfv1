@@ -1,0 +1,15 @@
+nulpunkt, 0x4e7
+kasse_nulpunkt, 0x510, 1296
+1 m møtrik, 0x516, 1302
+2 m møtrik, 0x51d, 1309
+3 m møtrik, 0x524, 1316
+4 m møtrik, 0x52a, 1322
+5 m møtrik, 0x531, 1329
+6 m møtrik, 0x538, 1336
+7 m møtrik, 0x53e, 1342
+8 m møtrik, 0x547, 1351
+9 m møtrik, 0x54e, 1358
+10 m møtrik, 0x554, 1364
+
+
+
